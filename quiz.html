@@ -1,88 +1,143 @@
-<section>
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electrical Quiz</title>
 
-<h2>⚡ Electrical Basic Quiz</h2>
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background:#f5f5f5;
+    margin:0;
+}
+
+header{
+    background:#1565c0;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.question{
+    background:white;
+    margin:20px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+}
+
+label{
+    display:block;
+    margin:10px 0;
+    cursor:pointer;
+}
+
+button{
+    background:#1565c0;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    font-size:18px;
+    cursor:pointer;
+    display:block;
+    margin:20px auto;
+}
+
+button:hover{
+    background:#0d47a1;
+}
+
+#result{
+    display:none;
+    background:#e8f5e9;
+    margin:20px;
+    padding:20px;
+    border-radius:10px;
+    font-size:20px;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>⚡ Electrical Quiz</h1>
+<p>Test Your Knowledge</p>
+</header>
+
+<form id="quizForm">
 
 <div class="question">
-<h3>1) Phase Wire चे काम काय?</h3>
+<h3>1. Phase Wire चा उपयोग काय?</h3>
 
-<label>
-<input type="radio" name="q1"> Current परत नेणे
-</label><br>
-
-<label>
-<input type="radio" name="q1"> Supply देणे
-</label><br>
-
-<label>
-<input type="radio" name="q1"> Earth Connection
-</label>
-
-<p><b>योग्य उत्तर:</b> Supply देणे</p>
+<label><input type="radio" name="q1" value="a"> Current परत नेणे</label>
+<label><input type="radio" name="q1" value="b"> Supply देणे</label>
+<label><input type="radio" name="q1" value="c"> Earthing करणे</label>
 
 </div>
 
-
 <div class="question">
+<h3>2. MCB कशासाठी वापरतात?</h3>
 
-<h3>2) MCB कशासाठी वापरतात?</h3>
-
-<label>
-<input type="radio" name="q2"> Decoration साठी
-</label><br>
-
-<label>
-<input type="radio" name="q2"> Safety Protection साठी
-</label><br>
-
-<label>
-<input type="radio" name="q2"> Light वाढवण्यासाठी
-</label>
-
-<p><b>योग्य उत्तर:</b> Safety Protection साठी</p>
+<label><input type="radio" name="q2" value="a"> Safety Protection</label>
+<label><input type="radio" name="q2" value="b"> Fan Speed</label>
+<label><input type="radio" name="q2" value="c"> Voltage वाढवणे</label>
 
 </div>
 
-
 <div class="question">
+<h3>3. Earth Wire चा रंग साधारणपणे कोणता असतो?</h3>
 
-<h3>3) Earth Wire चा उपयोग काय?</h3>
-
-<label>
-<input type="radio" name="q3"> Shock Protection साठी
-</label><br>
-
-<label>
-<input type="radio" name="q3"> Voltage वाढवण्यासाठी
-</label><br>
-
-<label>
-<input type="radio" name="q3"> Speed वाढवण्यासाठी
-</label>
-
-<p><b>योग्य उत्तर:</b> Shock Protection साठी</p>
+<label><input type="radio" name="q3" value="a"> हिरवा</label>
+<label><input type="radio" name="q3" value="b"> लाल</label>
+<label><input type="radio" name="q3" value="c"> काळा</label>
 
 </div>
 
+<button type="button" onclick="checkQuiz()">
+Submit Quiz
+</button>
 
-<div class="question">
+<div id="result"></div>
 
-<h3>4) Fan Speed Control करण्यासाठी काय वापरतात?</h3>
+</form>
+<script>
 
-<label>
-<input type="radio" name="q4"> MCB
-</label><br>
+function checkQuiz(){
 
-<label>
-<input type="radio" name="q4"> Regulator
-</label><br>
+let score = 0;
 
-<label>
-<input type="radio" name="q4"> Socket
-</label>
+let result = "";
 
-<p><b>योग्य उत्तर:</b> Regulator</p>
+if(document.querySelector('input[name="q1"]:checked')?.value=="b"){
+score++;
+}else{
+result += "❌ प्रश्न 1 : योग्य उत्तर - Supply देणे<br><br>";
+}
 
-</div>
+if(document.querySelector('input[name="q2"]:checked')?.value=="a"){
+score++;
+}else{
+result += "❌ प्रश्न 2 : योग्य उत्तर - Safety Protection<br><br>";
+}
 
+if(document.querySelector('input[name="q3"]:checked')?.value=="a"){
+score++;
+}else{
+result += "❌ प्रश्न 3 : योग्य उत्तर - हिरवा (Green)<br><br>";
+}
 
-</section>
+document.getElementById("result").style.display="block";
+
+document.getElementById("result").innerHTML =
+"<h2>🎉 तुमचा Score : "+score+"/3</h2><hr>"+result;
+
+}
+
+</script>
+
+</body>
+</html>
