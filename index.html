@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="mr">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,24 +16,38 @@ font-family:Arial,sans-serif;
 
 body{
 margin:0;
-background:#f1f5f9;
+background:#f2f6fa;
 color:#222;
 }
 
 header{
 background:linear-gradient(135deg,#ff9800,#f44336);
 color:white;
+padding:35px 20px;
 text-align:center;
-padding:35px 15px;
 }
 
 header h1{
-font-size:32px;
+font-size:34px;
 margin:0;
 }
 
 header p{
 font-size:18px;
+}
+
+
+nav{
+background:#222;
+padding:12px;
+text-align:center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:10px;
+font-weight:bold;
 }
 
 
@@ -43,10 +58,10 @@ padding:20px;
 
 .card{
 background:white;
-padding:20px;
-margin-bottom:20px;
+margin:20px 0;
+padding:25px;
 border-radius:18px;
-box-shadow:0 5px 15px rgba(0,0,0,0.15);
+box-shadow:0 5px 15px #ccc;
 }
 
 
@@ -55,16 +70,24 @@ color:#f4511e;
 }
 
 
-.item{
-background:#fff3e0;
+.info{
+background:#fff8e1;
 padding:15px;
-margin:10px 0;
 border-radius:10px;
+margin-top:10px;
+}
+
+
+.connection{
+background:#e3f2fd;
+padding:15px;
+border-radius:10px;
+margin:10px 0;
 font-weight:bold;
 }
 
 
-.info{
+.safety{
 background:#e8f5e9;
 }
 
@@ -89,9 +112,25 @@ padding:20px;
 
 <h1>⚡ Electric Wiring Master ⚡</h1>
 
-<p>Electrical Knowledge & Wiring Guide</p>
+<p>Complete Electrical Wiring Learning Guide</p>
 
 </header>
+
+
+<nav>
+
+<a href="#oneway">One Way</a>
+
+<a href="#twoway">Two Way</a>
+
+<a href="#fan">Fan</a>
+
+<a href="#socket">Socket</a>
+
+<a href="#mcb">MCB</a>
+
+</nav>
+
 
 
 <div class="container">
@@ -99,81 +138,235 @@ padding:20px;
 
 <div class="card">
 
-<h2>🔌 Wiring Diagrams</h2>
-
-<a href="one-way-switch.html" style="text-decoration:none;color:black;">
-<div class="item">💡 One Way Switch Wiring</div>
-</a>
-
-<a href="two-way-switch.html" style="text-decoration:none;color:black;">
-<div class="item">💡 Two Way Switch Wiring</div>
-</a>
-
-<a href="fan-wiring.html" style="text-decoration:none;color:black;">
-<div class="item">🌀 Fan Wiring Connection</div>
-</a>
-
-<div class="item">🔦 Light Wiring</div>
-
-<div class="item">🔌 Socket Connection</div>
-
-<div class="item">⚡ MCB Connection</div>
-
-</div>
-
-
-
-<div class="card info">
-
-<h2>🛠 Electrical Basics</h2>
-
-<p>⚡ Phase - Live Supply Wire</p>
-
-<p>⚡ Neutral - Return Path</p>
-
-<p>⚡ Earth - Safety Protection</p>
-
-<p>⚡ MCB - Protection Device</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h2>🏠 House Wiring Guide</h2>
+<h2>🏠 House Wiring Basic</h2>
 
 <p>
-घरातील वायरिंग करताना योग्य वायर size,
-MCB selection आणि safety rules पाळणे आवश्यक आहे.
+घरातील वायरिंगमध्ये Phase, Neutral आणि Earth या तीन मुख्य वायरचा वापर केला जातो.
+योग्य वायर size, MCB आणि Earthing वापरणे सुरक्षिततेसाठी आवश्यक आहे.
 </p>
 
 </div>
 
 
 
-<div class="card">
+<div class="card" id="oneway">
 
-<h2>🛡 Safety Rules</h2>
+<h2>💡 One Way Switch Wiring</h2>
+
+<p>
+एका switch ने एका light ला control करण्यासाठी One Way Switch वापरला जातो.
+</p>
+
+
+<div class="connection">
+Phase Wire ➡ Switch Input
+</div>
+
+<div class="connection">
+Switch Output ➡ Light Phase
+</div>
+
+<div class="connection">
+Neutral Wire ➡ Direct Light
+</div>
+
+<div class="connection">
+Earth Wire ➡ Metal Body
+</div>
+
+
+<div class="info">
+
+<b>Working:</b>
+
+<p>
+Switch ON केल्यावर Phase supply bulb पर्यंत जाते आणि light सुरू होते.
+Switch OFF केल्यावर circuit तुटतो आणि light बंद होते.
+</p>
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="card" id="twoway">
+
+<h2>💡 Two Way Switch Wiring</h2>
+
+<p>
+दोन वेगवेगळ्या ठिकाणाहून एक light control करण्यासाठी Two Way Switch वापरला जातो.
+</p>
+
+
+<div class="connection">
+Phase ➡ Switch 1 Common
+</div>
+
+<div class="connection">
+Switch 1 ➡ Switch 2 Traveller Wires
+</div>
+
+<div class="connection">
+Switch 2 Common ➡ Light
+</div>
+
+<div class="connection">
+Neutral ➡ Direct Light
+</div>
+
+
+<div class="info">
+
+<b>Use:</b>
+
+<p>
+Staircase, Bedroom Entrance आणि मोठ्या Room मध्ये याचा उपयोग होतो.
+</p>
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="card" id="fan">
+
+<h2>🌀 Fan Wiring Connection</h2>
+
+
+<p>
+Fan मध्ये Regulator आणि Capacitor च्या मदतीने speed control केली जाते.
+</p>
+
+
+<div class="connection">
+Phase ➡ Regulator Input
+</div>
+
+<div class="connection">
+Regulator Output ➡ Fan Phase
+</div>
+
+<div class="connection">
+Neutral ➡ Fan Neutral
+</div>
+
+<div class="connection">
+Capacitor ➡ Fan Capacitor Terminal
+</div>
+
+<div class="connection">
+Earth ➡ Fan Body
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="card" id="socket">
+
+<h2>🔌 3 Pin Socket Wiring</h2>
+
+
+<p>
+Socket मध्ये Phase, Neutral आणि Earth योग्य पद्धतीने जोडणे आवश्यक आहे.
+</p>
+
+
+<div class="connection">
+Phase ➡ Right Side Terminal
+</div>
+
+<div class="connection">
+Neutral ➡ Left Side Terminal
+</div>
+
+<div class="connection">
+Earth ➡ Top Terminal
+</div>
+
+
+<div class="info">
+
+<p>
+Earth Wire मुळे leakage current पासून protection मिळते.
+</p>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="card" id="mcb">
+
+<h2>⚡ MCB Connection</h2>
+
+
+<p>
+MCB overload आणि short circuit पासून electrical system चे संरक्षण करते.
+</p>
+
+
+<div class="connection">
+Main Supply Phase ➡ MCB Input
+</div>
+
+<div class="connection">
+MCB Output ➡ Distribution Board
+</div>
+
+
+<p>
+योग्य Ampere ची MCB वापरणे खूप महत्वाचे आहे.
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card safety">
+
+<h2>🛡 Electrical Safety Rules</h2>
 
 <p>✔ काम करण्याआधी Main Supply बंद करा</p>
 
 <p>✔ योग्य Tools वापरा</p>
 
-<p>✔ Earthing तपासा</p>
+<p>✔ Wet हाताने काम करू नका</p>
 
-<p>✔ Safety First</p>
+<p>✔ Proper Earthing करा</p>
+
+<p>✔ Damaged Wire वापरू नका</p>
 
 </div>
 
 
+
 </div>
+
 
 
 <footer>
 
 © 2026 Electric Wiring Master
+
 <br>
+
 Created by Pratik Thorat
 
 </footer>
