@@ -7,14 +7,60 @@
 
 <link rel="stylesheet" href="style.css">
 </head>
+<script>
 
+function searchTopic(){
+
+let topic = document.getElementById("search").value.toLowerCase();
+
+
+if(topic.includes("basic") || topic.includes("voltage") || topic.includes("current")){
+    
+window.location.href="Basics.html";
+
+}
+
+else if(topic.includes("mcb") || topic.includes("rccb") || topic.includes("component")){
+
+window.location.href="Components.html";
+
+}
+
+else if(topic.includes("wiring") || topic.includes("switch") || topic.includes("fan")){
+
+window.location.href="Wiring.html";
+
+}
+
+else if(topic.includes("quiz")){
+
+window.location.href="Quiz.html";
+
+}
+
+else{
+
+alert("Topic सापडला नाही. पुन्हा प्रयत्न करा.");
+
+}
+
+
+}
+
+</script>
 <body>
 
 <header>
     <h1>⚡ Electric Wiring Master ⚡</h1>
     <p>मराठीत Basic ते Advanced Electrical Learning</p>
 </header>
+<div class="search-box">
 
+<input type="text" id="search" placeholder="Search Electrical Topic...">
+
+<button onclick="searchTopic()">Search</button>
+
+</div>
 <nav>
     <a href="index.html">🏠 Home</a>
     <a href="basics.html">📘 Basics</a>
