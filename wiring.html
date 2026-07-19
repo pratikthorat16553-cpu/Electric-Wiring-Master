@@ -6,59 +6,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Wiring Diagram</title>
+<title>Electrical Wiring</title>
 
-<style>
-
-body{
-font-family:Arial,sans-serif;
-margin:0;
-background:#f4f4f4;
-}
-
-header{
-background:#673ab7;
-color:white;
-text-align:center;
-padding:20px;
-}
-
-nav{
-background:#512da8;
-padding:10px;
-text-align:center;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin:10px;
-font-weight:bold;
-}
-
-section{
-background:white;
-margin:20px;
-padding:20px;
-border-radius:10px;
-}
-
-.diagram{
-background:#ede7f6;
-padding:15px;
-margin:15px 0;
-border-radius:8px;
-border-left:5px solid #673ab7;
-}
-
-footer{
-background:#512da8;
-color:white;
-text-align:center;
-padding:10px;
-}
-
-</style>
+<link rel="stylesheet" href="Style.css">
 
 </head>
 
@@ -68,44 +18,109 @@ padding:10px;
 
 <header>
 
-<h1>⚡ Wiring Diagrams ⚡</h1>
+<h1>⚡ Electrical Wiring</h1>
 
-<p>Practical Electrical Connections</p>
+<p>घरातील आणि Basic Wiring ची माहिती</p>
 
 </header>
+
 
 
 <nav>
 
 <a href="index.html">Home</a>
-
-<a href="basics.html">Basics</a>
-
-<a href="components.html">Components</a>
-
-<a href="wiring.html">Wiring</a>
+<a href="Basics.html">Basics</a>
+<a href="Components.html">Components</a>
+<a href="Wiring.html">Wiring</a>
+<a href="Quiz.html">Quiz</a>
 
 </nav>
 
 
 
-<section>
+<section class="cards">
 
 
-<h2>Basic Wiring Information</h2>
+<div class="card">
+
+<h3>💡 One Way Switch Wiring</h3>
+
+<p>
+एका Switch ने एका Light ला Control करण्यासाठी
+One Way Switch वापरला जातो.
+
+Connection:
+Phase → Switch → Light → Neutral
+</p>
+
+</div>
 
 
-<div class="diagram">
 
-<h3>💡 One Light One Switch Connection</h3>
+<div class="card">
+
+<h3>🔄 Two Way Switch Wiring</h3>
+
+<p>
+दोन वेगवेगळ्या ठिकाणाहून
+एकाच Light ला ON/OFF करण्यासाठी
+Two Way Switch वापरतात.
+
+उदा. Staircase Light
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>🔌 Socket Wiring</h3>
+
+<p>
+Socket मध्ये तीन Connection असतात:
+
+Phase (L)
+Neutral (N)
+Earth (E)
+
+Earth Safety साठी आवश्यक आहे.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>🌀 Fan Wiring</h3>
+
+<p>
+Fan मध्ये:
+Phase → Regulator → Fan
+
+Neutral → Direct Fan
+
+Connection योग्य करणे गरजेचे आहे.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>🛡️ MCB DB Wiring</h3>
 
 <p>
 
-Phase ➡ Switch ➡ Light ➡ Neutral
+Main Supply →
+Main Switch →
+RCCB →
+MCB →
+Different Circuits
 
-<br><br>
-
-Switch हा Phase Wire मध्ये जोडला जातो.
+अशा प्रकारे Distribution केले जाते.
 
 </p>
 
@@ -113,63 +128,42 @@ Switch हा Phase Wire मध्ये जोडला जातो.
 
 
 
-<div class="diagram">
+<div class="card">
 
-<h3>🌀 Fan Connection</h3>
+<h3>🏠 Home Wiring Tips</h3>
 
 <p>
 
-Phase ➡ Regulator ➡ Fan
+✔ योग्य Wire Size वापरा
 
-<br>
+✔ Proper Earthing करा
 
-Neutral ➡ Fan
+✔ Loose Connection टाळा
 
-<br>
-
-Earth ➡ Fan Body
+✔ Safety नियम पाळा
 
 </p>
 
 </div>
 
 
-
-<div class="diagram">
-
-<h3>🔌 Socket Connection</h3>
-
-<p>
-
-Phase ➡ Switch ➡ Socket
-
-<br>
-
-Neutral ➡ Socket
-
-<br>
-
-Earth ➡ Earth Point
-
-</p>
-
-</div>
+</section>
 
 
 
-<div class="diagram">
+<section class="safety">
 
-<h3>⚠️ Safety</h3>
+<h2>⚠️ Important Safety</h2>
 
-<p>
+<ul>
 
-काम करण्यापूर्वी Main Supply बंद करा.
-Tester ने Supply तपासा.
+<li>Wiring करण्याआधी Main Supply बंद करा.</li>
 
-</p>
+<li>Tester आणि Multimeter योग्य वापरा.</li>
 
-</div>
+<li>Overload टाळा.</li>
 
+</ul>
 
 
 </section>
@@ -179,10 +173,11 @@ Tester ने Supply तपासा.
 <footer>
 
 <p>
-Electric Wiring Master © 2026
+Electric Wiring Master ⚡
 </p>
 
 </footer>
+
 
 
 </body>
