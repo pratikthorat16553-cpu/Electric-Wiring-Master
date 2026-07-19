@@ -75,3 +75,18 @@ footer{
         text-align:center;
     }
 }
+.dark-mode{
+    background:#121212;
+    color:white;
+}
+
+.dark-mode .card{
+    background:#1e1e1e;
+    color:white;
+}
+
+.dark-mode header,
+.dark-mode footer,
+.dark-mode nav{
+    background:#000;
+}
