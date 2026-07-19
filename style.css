@@ -155,3 +155,31 @@ nav a{
 }
 
 }
+.search-box{
+
+text-align:center;
+padding:20px;
+
+}
+
+
+.search-box input{
+
+width:60%;
+padding:12px;
+border-radius:8px;
+border:1px solid #ccc;
+
+}
+
+
+.search-box button{
+
+padding:12px 20px;
+background:#ff9800;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+
+}
