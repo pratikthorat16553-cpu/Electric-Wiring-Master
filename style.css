@@ -187,6 +187,11 @@ nav a:hover{
 .safety li{
     margin:10px;
 }
+<div style="text-align:center; margin:40px 0;">
+    <button class="start-btn" onclick="location.href='Components.html'">
+        ➡️ Next Chapter
+    </button>
+</div>
 /* Footer */
 
 footer{
