@@ -57,77 +57,117 @@ nav a:hover{
     background:#ff9800;
 }
 
+/* Hero Section */
+
+/* Hero Section */
 
 .hero{
     text-align:center;
-    padding:40px 20px;
-}
-.
+    padding:60px 20px;
+    background:linear-gradient(to right,#ffffff,#eef6ff);
 }
 
 .hero h2{
+    font-size:36px;
     color:#ff9800;
     margin-bottom:15px;
 }
 
-
 .hero p{
+    max-width:800px;
+    margin:auto;
     font-size:18px;
+    color:#555;
+    margin-bottom:30px;
 }
-container{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:20px;
-    padding:30px 20px;
+
+/* Search Box */
+
+.search-box{
+    text-align:center;
+    margin:25px 0;
+}
+
+.search-box input{
+    width:60%;
+    max-width:450px;
+    padding:14px;
+    border:2px solid #ff9800;
+    border-radius:10px;
+    outline:none;
+    font-size:16px;
+}
+
+.search-box button{
+    padding:14px 22px;
+    border:none;
+    border-radius:10px;
+    background:#ff9800;
+    color:#fff;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.search-box button:hover{
+    background:#e67e00;
+}
+
+/* Cards */
+
+.container{
     max-width:1200px;
     margin:auto;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+    padding:40px 20px;
 }
+
 .card{
     background:#fff;
-    width:300px;
+    width:280px;
     padding:25px;
     border-radius:18px;
     text-align:center;
-    box-shadow:0 8px 20px rgba(0,0,0,0.15);
-    transition:all 0.3s ease;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    transition:.3s;
     border-top:5px solid #ff9800;
 }
 
 .card:hover{
     transform:translateY(-10px);
-    box-shadow:0 15px 30px rgba(0,0,0,0.25);
+    box-shadow:0 15px 30px rgba(0,0,0,.25);
 }
 
 .card h3{
     color:#ff9800;
-    font-size:24px;
     margin-bottom:15px;
+    font-size:22px;
 }
 
 .card p{
-    font-size:16px;
-    line-height:1.7;
     color:#555;
-    margin-bottom:20px;
+    margin-bottom:15px;
 }
 
-.card button,
-.card a{
+.card a,
+.card button{
     display:inline-block;
     background:#ff9800;
     color:#fff;
-    padding:10px 20px;
-    border:none;
-    border-radius:8px;
     text-decoration:none;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
     cursor:pointer;
-    transition:0.3s;
+    transition:.3s;
 }
 
-.card button:hover,
-.card a:hover{
-    background:#e68900;
+.card a:hover,
+.card button:hover{
+    background:#e67e00;
 }
 
 
